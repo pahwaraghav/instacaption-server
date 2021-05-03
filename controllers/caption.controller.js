@@ -7,7 +7,7 @@ exports.caption_create = (req, res, next) => {
     likes: req.body.likes,
   });
 
-  caption.save((err) => {
+  caption.save((next, err) => {
     if (err) {
       return next(err);
     }
